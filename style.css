@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f1f1f1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+}
+.container h1 {
+    margin-top: 5rem;
+    text-align: center;
+    color: green;
+    font-size: 2rem;
+}
+.container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.container .box .image {
+    flex: 2;
+}
+
+.container .box .image img {
+    height: 30rem;
+    display: flex;
+}
+
+.container .box .login-box{
+    flex: 1;
+}
+
+.login-box {
+    width: 300px;
+    background: transparent;
+    color: #000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 70px 30px;
+    border-radius: 5px;
+}
+
+.login-box h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color: green;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+    text-align: end;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: 0.5s;
+    
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    right: 0;
+    color: #000;
+    font-size: 12px;
+}
+
+.login-box button {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-box button span {
+    position: absolute;
+    display: block;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.login-box button span:nth-child(1) {
+    transform-origin: left;
+}
+
+.login-box button span:nth-child(2) {
+    transform-origin: top;
+}
+
+.login-box button span:nth-child(3) {
+    transform-origin: right;
+}
+
+.login-box button span:nth-child(4) {
+    transform-origin: bottom;
+}
+
+.login-box button:hover span {
+    transform: scaleX(1);
+}
+
+.login-box button:hover span:nth-child(1) {
+    transform-origin: right;
+}
+
+.login-box button:hover span:nth-child(2) {
+    transform-origin: bottom;
+}
+
+.login-box button:hover span:nth-child(3) {
+    transform-origin: left;
+}
+
+.login-box button:hover span:nth-child(4) {
+    transform-origin: top;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: green;
+}
+
+form p {
+    text-align: center;
+    margin-top: 1.3rem;
+    font-size: 1.2rem;
+}
+
+form a{
+    text-decoration: none;
+    color: green;
+}
